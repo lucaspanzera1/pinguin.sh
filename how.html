@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Funciona - Penguin.sh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="resources/css/how.css?v=<?= time() ?>">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="relative z-10 flex justify-between items-center p-4 md:p-6 lg:px-12 border-b border-gray-800">
+        <div class="flex items-center space-x-3">
+                      <a href="index.html">
+                <div class="w-8 h-8 md:w-10 md:h-10 penguin-gradient rounded-lg flex items-center justify-center">
+                <span class="text-white font-bold text-sm md:text-lg">🐧</span>
+            </div>
+            </a>
+            <div>
+                <span class="font-bold text-lg md:text-xl">Penguin.sh</span>
+                <div class="text-xs text-gray-400">Scripts inteligentes para Ubuntu</div>
+            </div>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav hidden md:flex space-x-6 lg:space-x-8">
+            <a href="index.html" class="hover:text-orange-400 transition-colors">Início</a>
+            <a href="how.html" class="text-orange-400 font-semibold">Como Funciona</a>
+            <a href="lib.html" class="hover:text-orange-400 transition-colors">Programas</a>
+            <a href="script.html" class="hover:text-orange-400 transition-colors">Criar Script</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu md:hidden bg-gray-800 border-t border-gray-700">
+        <nav class="flex flex-col space-y-4 p-4">
+                        <a href="index.html" class="hover:text-orange-400 transition-colors">Início</a>
+            <a href="how.html" class="text-orange-400 font-semibold">Como Funciona</a>
+            <a href="lib.html" class="hover:text-orange-400 transition-colors">Programas</a>
+            <a href="script.html" class="hover:text-orange-400 transition-colors">Criar Script</a>
+        </nav>
+    </div>
+    <!-- Hero Section -->
+    <section class="py-12 md:py-20">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 text-center">
+            <div class="fade-in">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                    Como Funciona o
+                    <span class="text-orange-400">Penguin.sh</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+                    Descubra como criar instaladores personalizados com menu interativo para Ubuntu. 
+                    Um processo simples que revoluciona a forma como você instala programas.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="bg-orange-500 bg-opacity-20 border border-orange-500 px-4 py-2 rounded-full text-sm">
+                        ⚡ Processo em 3 Etapas
+                    </div>
+                    <div class="bg-blue-500 bg-opacity-20 border border-blue-500 px-4 py-2 rounded-full text-sm">
+                        🎯 Menu Interativo
+                    </div>
+                    <div class="bg-green-500 bg-opacity-20 border border-green-500 px-4 py-2 rounded-full text-sm">
+                        🚀 Automação Total
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Steps -->
+    <section class="py-12 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">O Processo Completo</h2>
+                <p class="text-gray-400 text-lg">Três etapas simples para criar seus instaladores personalizados</p>
+            </div>
+
+            <div class="space-y-16">
+                <!-- Step 1 -->
+                <div class="fade-in grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="number-badge">1</div>
+                            <h3 class="text-2xl md:text-3xl font-bold">Explore Programas Validados</h3>
+                        </div>
+                        <p class="text-gray-400 text-lg leading-relaxed">
+                            Nossa equipe mantém uma biblioteca curada de programas com instalações 100% validadas. 
+                            Cada programa passou por testes rigorosos para garantir instalação perfeita no Ubuntu.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-green-400">✅</span>
+                                <span>Mais de <strong class="text-white">26 programas</strong> pré-validados</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-green-400">✅</span>
+                                <span>Instalações testadas em <strong class="text-white">Ubuntu 22.04+</strong></span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-green-400">✅</span>
+                                <span>Scripts de <strong class="text-white">dependências automatizadas</strong></span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-green-400">✅</span>
+                                <span>Comunidade contribui com <strong class="text-white">novos programas</strong></span>
+                            </div>
+                        </div>
+                        <div class="bg-gray-800 border border-gray-700 rounded-lg p-4">
+                            <h4 class="font-semibold mb-2 text-orange-400">💡 Programas Populares Inclusos:</h4>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+                                <span>• VS Code</span>
+                                <span>• Docker</span>
+                                <span>• IntelliJ IDEA</span>
+                                <span>• Discord</span>
+                                <span>• VirtualBox</span>
+                                <span>• Firefox</span>
+                                <span>• GitKraken</span>
+                                <span>• OBS Studio</span>
+                                <span>• Spotify</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="lib.html">
+                        <div class="step-card rounded-2xl p-6">
+                        <div class="bg-gradient-to-br from-orange-500 to-red-600 p-6 rounded-xl text-center">
+                            <div class="text-4xl mb-4">📦</div>
+                            <h4 class="text-xl font-bold mb-2">Biblioteca de Programas</h4>
+                            <p class="text-sm opacity-90">Programas validados e prontos para usar</p>
+                        </div>
+                        <div class="mt-6 space-y-3">
+                            <div class="flex justify-between items-center py-2 px-3 bg-gray-800 rounded">
+                                <span class="text-sm">VS Code</span>
+                                <span class="text-green-400 text-xs">✓ Validado</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 px-3 bg-gray-800 rounded">
+                                <span class="text-sm">Docker</span>
+                                <span class="text-green-400 text-xs">✓ Validado</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 px-3 bg-gray-800 rounded">
+                                <span class="text-sm">Discord</span>
+                                <span class="text-green-400 text-xs">✓ Validado</span>
+                            </div>
+                            <div class="text-center text-xs text-gray-400 mt-2">
+                                + 23 programas adicionais
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="fade-in grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="step-card rounded-2xl p-6 lg:order-1">
+                        <a href="script.html">
+                            <div class="terminal-preview rounded-xl overflow-hidden">
+                            <div class="terminal-header">
+                                <div class="terminal-dot dot-red"></div>
+                                <div class="terminal-dot dot-yellow"></div>
+                                <div class="terminal-dot dot-green"></div>
+                                <span class="text-xs ml-2">Seletor de Programas - Penguin.sh</span>
+                            </div>
+                            <div class="p-4 h-64 overflow-y-auto">
+<pre class="text-xs">
+<span class="highlight-orange">┌─────────────────────────────────────────────────┐</span>
+<span class="highlight-orange">│            CRIAR SEU INSTALADOR PERSONALIZADO              │</span>
+<span class="highlight-orange">├─────────────────────────────────────────────────┤</span>
+
+<span class="highlight-cyan">□ VS Code</span>                 <span class="highlight-green">□ Docker</span>
+<span class="highlight-cyan">☑ Discord</span>                <span class="highlight-green">□ VirtualBox</span>
+<span class="highlight-cyan">☑ Firefox</span>               <span class="highlight-green">☑ GitKraken</span>
+<span class="highlight-cyan">□ IntelliJ IDEA</span>          <span class="highlight-green">□ OBS Studio</span>
+<span class="highlight-cyan">☑ Spotify</span>               <span class="highlight-green">□ GIMP</span>
+
+<span class="highlight-orange">Programas selecionados: 4</span>
+<span class="text-white">[ Gerar Script ] [ Limpar Seleção ]</span>
+</pre>
+                            </div>
+                        </div>
+                        </a>
+                        <div class="mt-4 text-center">
+                            <div class="inline-block bg-blue-500 bg-opacity-20 border border-blue-500 px-3 py-1 rounded-full text-xs">
+                                Interface Web Intuitiva
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-6 lg:order-2">
+                        <div class="flex items-center space-x-4">
+                            <div class="number-badge">2</div>
+                            <h3 class="text-2xl md:text-3xl font-bold">Selecione Seus Programas</h3>
+                        </div>
+                        <p class="text-gray-400 text-lg leading-relaxed">
+                            Use nossa interface web intuitiva para selecionar exatamente os programas que você precisa. 
+                            Marque as caixas, visualize sua seleção e gere seu script personalizado.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-blue-400">🎯</span>
+                                <span><strong class="text-white">Interface visual</strong> com checkboxes simples</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-blue-400">🔍</span>
+                                <span><strong class="text-white">Busca e filtros</strong> para encontrar programas</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-blue-400">📋</span>
+                                <span><strong class="text-white">Preview em tempo real</strong> do que será instalado</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-blue-400">⚙️</span>
+                                <span><strong class="text-white">Configurações avançadas</strong> opcionais</span>
+                            </div>
+                        </div>
+                        <div class="bg-blue-900 bg-opacity-30 border border-blue-600 rounded-lg p-4">
+                            <h4 class="font-semibold mb-2 text-blue-400">🚀 Funcionalidades:</h4>
+                            <ul class="text-sm space-y-1">
+                                <li>• Seleção múltipla com um clique</li>
+                                <li>• Estimativa de tempo de instalação</li>
+                                <li>• Verificação de dependências automática</li>
+                                <li>• Sugestões baseadas em popularidade</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="fade-in grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="number-badge">3</div>
+                            <h3 class="text-2xl md:text-3xl font-bold">Execute com Menu Interativo</h3>
+                        </div>
+                        <p class="text-gray-400 text-lg leading-relaxed">
+                            Baixe seu script.sh personalizado e execute no terminal. Um menu interativo profissional 
+                            permite escolher quais programas instalar, quando instalar, com progresso visual em tempo real.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-purple-400">⚡</span>
+                                <span><strong class="text-white">Menu interativo</strong> no terminal</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-purple-400">📊</span>
+                                <span><strong class="text-white">Barra de progresso</strong> visual</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-purple-400">🔧</span>
+                                <span><strong class="text-white">Instalação seletiva</strong> ou completa</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-purple-400">📝</span>
+                                <span><strong class="text-white">Log detalhado</strong> de operações</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-gray-800 border border-gray-700 rounded-lg p-3 text-center">
+                                <div class="text-2xl mb-1">⬇️</div>
+                                <div class="text-sm font-semibold">Download</div>
+                                <div class="text-xs text-gray-400">script.sh</div>
+                            </div>
+                            <div class="bg-gray-800 border border-gray-700 rounded-lg p-3 text-center">
+                                <div class="text-2xl mb-1">▶️</div>
+                                <div class="text-sm font-semibold">Execute</div>
+                                <div class="text-xs text-gray-400">chmod +x</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card rounded-2xl p-6">
+                        <div class="terminal-preview rounded-xl overflow-hidden">
+                            <div class="terminal-header">
+                                <div class="terminal-dot dot-red"></div>
+                                <div class="terminal-dot dot-yellow"></div>
+                                <div class="terminal-dot dot-green"></div>
+                                <span class="text-xs ml-2">Terminal - Ubuntu</span>
+                            </div>
+                            <div class="p-4 h-64 overflow-y-auto">
+<pre class="text-xs">
+<span class="highlight-orange">██████╗ ███████╗███╗   ██╗ ██████╗ ██╗   ██╗██╗███╗   ██╗</span>
+<span class="highlight-orange">██╔══██╗██╔════╝████╗  ██║██╔════╝ ██║   ██║██║████╗  ██║</span>
+<span class="highlight-orange">██████╔╝█████╗  ██╔██╗ ██║██║  ███╗██║   ██║██║██╔██╗ ██║</span>
+<span class="highlight-orange">██╔═══╝ ██╔══╝  ██║╚██╗██║██║   ██║██║   ██║██║██║╚██╗██║</span>
+<span class="highlight-orange">██║     ███████╗██║ ╚████║╚██████╔╝╚██████╔╝██║██║ ╚████║</span>
+
+<span class="highlight-cyan">┌─────────────────────────────────────────────────┐</span>
+<span class="highlight-cyan">│              PROGRAMAS DISPONÍVEIS             │</span>
+<span class="highlight-cyan">├─────────────────────────────────────────────────┤</span>
+<span class="text-white">│  1 - Discord           3 - Firefox             │</span>
+<span class="text-white">│  2 - GitKraken         4 - Spotify             │</span>
+<span class="highlight-cyan">├─────────────────────────────────────────────────┤</span>
+<span class="text-white">│ Digite os números (ex: 1 3 4) ou 'all'         │</span>
+<span class="highlight-cyan">└─────────────────────────────────────────────────┘</span>
+
+<span class="highlight-green">Sua escolha:</span> <span class="text-white">1 4</span>
+
+<span class="highlight-green">[INFO]</span> Instalando Discord...
+<span class="highlight-orange">██████████████████░░░░░░░░░░</span> <span class="text-white">65%</span>
+</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-12 md:py-20 bg-gray-800 bg-opacity-50">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Vantagens do Penguin.sh</h2>
+                <p class="text-gray-400 text-lg">Por que escolher nossa solução para automação de instalações</p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="step-card rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold mb-3">Velocidade</h3>
+                    <p class="text-gray-400">Configure um sistema Ubuntu completo em minutos, não horas. Instale dezenas de programas com um único comando.</p>
+                </div>
+                
+                <div class="step-card rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-bold mb-3">Precisão</h3>
+                    <p class="text-gray-400">Scripts testados e validados. Sem erros de dependências, sem falhas de instalação. Funciona na primeira tentativa.</p>
+                </div>
+                
+                <div class="step-card rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-4">🔧</div>
+                    <h3 class="text-xl font-bold mb-3">Personalização</h3>
+                    <p class="text-gray-400">Crie instaladores únicos para cada necessidade. Laboratórios, servidores, workstations - cada script sob medida.</p>
+                </div>
+                
+                <div class="step-card rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-4">👥</div>
+                    <h3 class="text-xl font-bold mb-3">Comunidade</h3>
+                    <p class="text-gray-400">Usuários contribuem com novos programas. Uma biblioteca em constante crescimento mantida pela comunidade.</p>
+                </div>
+                
+                <div class="step-card rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-xl font-bold mb-3">Profissional</h3>
+                    <p class="text-gray-400">Interface visual com progresso, logs detalhados e relatórios. Ideal para ambientes corporativos e suporte técnico.</p>
+                </div>
+                
+                <div class="step-card rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl font-bold mb-3">Automatização</h3>
+                    <p class="text-gray-400">Scripts podem ser executados remotamente via SSH. Perfeito para deployment em massa e configuração de servidores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="py-12 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Casos de Uso</h2>
+                <p class="text-gray-400 text-lg">Onde o Penguin.sh faz a diferença no dia a dia</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-4">🏢</div>
+                    <h3 class="text-xl font-bold mb-3">Empresas</h3>
+                    <p class="text-sm opacity-90">Padronize instalações em máquinas corporativas. Configure dezenas de workstations rapidamente.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-600 to-green-800 rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-4">🎓</div>
+                    <h3 class="text-xl font-bold mb-3">Laboratórios</h3>
+                    <p class="text-sm opacity-90">Configure laboratórios de informática com todos os softwares necessários em uma única execução.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-600 to-purple-800 rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-4">🔧</div>
+                    <h3 class="text-xl font-bold mb-3">Suporte Técnico</h3>
+                    <p class="text-sm opacity-90">Crie scripts específicos para diferentes perfis de usuários. Agilize atendimentos e padronize soluções.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-orange-600 to-red-600 rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-4">💻</div>
+                    <h3 class="text-xl font-bold mb-3">Desenvolvedores</h3>
+                    <p class="text-sm opacity-90">Configure ambientes de desenvolvimento completos. Docker, IDEs, ferramentas - tudo automatizado.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-teal-600 to-cyan-800 rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-4">🖥️</div>
+                    <h3 class="text-xl font-bold mb-3">Servidores</h3>
+                    <p class="text-sm opacity-90">Deploy automatizado de servidores Ubuntu com todas as dependências e configurações necessárias.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-pink-600 to-rose-800 rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-4">🏠</div>
+                    <h3 class="text-xl font-bold mb-3">Uso Pessoal</h3>
+                    <p class="text-sm opacity-90">Reinstalou o Ubuntu? Restaure todos seus programas favoritos em minutos, não horas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 md:py-20 bg-gradient-to-r from-orange-600 to-red-600">
+        <div class="max-w-4xl mx-auto px-4 md:px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Pronto para Revolucionar suas Instalações Ubuntu?
+            </h2>
+            <p class="text-lg md:text-xl mb-8 opacity-90">
+                Junte-se a milhares de usuários que já automatizaram suas instalações com o Penguin.sh
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="script.html">
+                    <button class="bg-white text-orange-600 px-8 py-4 rounded-lg font-bold text-lg hover-glow transition-all duration-300 hover:scale-105">
+                    🚀 Criar Meu Primeiro Script
+                </button>
+                </a>
+            </div>
+            </section>
+
+            <script src="resources/js/index.js"></script>
+            </body>
+</html>

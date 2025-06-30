@@ -1,0 +1,113 @@
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+        
+        .penguin-gradient {
+            background: linear-gradient(135deg, #E9500D 0%, #0066cc 100%);
+        }
+        
+        .hover-glow:hover {
+            box-shadow: 0 0 20px rgba(255, 145, 0, 0.3);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .step-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(31, 41, 55, 0.8) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(75, 85, 99, 0.3);
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 145, 0, 0.5);
+            box-shadow: 0 10px 40px rgba(255, 145, 0, 0.1);
+        }
+        
+        .code-preview {
+            background: #1a1a1a;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            line-height: 1.4;
+            color: #00ff41;
+        }
+        
+        .number-badge {
+            background: linear-gradient(135deg, #ff9100 0%, #ff6b00 100%);
+            color: #000;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .terminal-preview {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            color: #c9d1d9;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            line-height: 1.3;
+        }
+        
+        .terminal-header {
+            background: #21262d;
+            border-bottom: 1px solid #30363d;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27ca3f; }
+        
+        .highlight-orange { color: #ff9100; }
+        .highlight-cyan { color: #58a6ff; }
+        .highlight-green { color: #7ee787; }
+
+        /* Ajustes para o menu mobile */
+        .mobile-menu {
+            display: none;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+        }

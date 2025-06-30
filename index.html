@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguin.sh - Scripts Inteligentes para Ubuntu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="resources/css/index.css?v=<?= time() ?>">
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Header -->
+    <body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Header -->
+    <header class="relative z-10 flex justify-between items-center p-4 md:p-6 lg:px-12 border-b border-gray-800">
+        <div class="flex items-center space-x-3">
+                        <a href="index.html">
+                <div class="w-8 h-8 md:w-10 md:h-10 penguin-gradient rounded-lg flex items-center justify-center">
+                <span class="text-white font-bold text-sm md:text-lg">🐧</span>
+            </div>
+            </a>
+            <div>
+                <span class="font-bold text-lg md:text-xl">Penguin.sh</span>
+                <div class="text-xs text-gray-400">Scripts inteligentes para Ubuntu</div>
+            </div>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav hidden md:flex space-x-6 lg:space-x-8">
+            <a href="index.html" class="text-orange-400 font-semibold">Início</a>
+            <a href="how.html" class="hover:text-orange-400 transition-colors">Como Funciona</a>
+            <a href="lib.html" class="hover:text-orange-400 transition-colors">Programas</a>
+            <a href="script.html" class="hover:text-orange-400 transition-colors">Criar Script</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu md:hidden bg-gray-800 border-t border-gray-700">
+        <nav class="flex flex-col space-y-4 p-4">
+            <a href="index.html" class="text-orange-400 font-semibold">Início</a>
+            <a href="how.html" class="hover:text-orange-400 transition-colors">Como Funciona</a>
+            <a href="lib.html" class="hover:text-orange-400 transition-colors">Programas</a>
+            <a href="script.html" class="hover:text-orange-400 transition-colors">Criar Script</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="md:py-10 relative main-content">
+        <!-- Terminal Background Pattern - Only Desktop -->
+        <div class="absolute inset-0 overflow-hidden hidden lg:block">
+            <div class="terminal-pattern absolute top-0 right-0 w-3/5 h-full flex items-center justify-center">
+                <div class="text-left">
+#!/bin/bash
+# Penguin.sh - Script Gerado Automaticamente
+# Data: $(date)
+
+# Função para exibir o cabeçalho
+show_header() {
+    clear
+    echo -e "${ORANGE}${BOLD}"
+    echo "██████╗ ██╗███╗   ██╗ ██████╗ ██╗   ██╗██╗███╗   ██╗"
+    echo "██╔══██╗██║████╗  ██║██╔════╝ ██║   ██║██║████╗  ██║"
+    echo "██████╔╝██║██╔██╗ ██║██║  ███╗██║   ██║██║██╔██╗ ██║"
+    echo "██╔═══╝ ██║██║╚██╗██║██║   ██║██║   ██║██║██║╚██╗██║"
+    echo "██║     ██║██║ ╚████║╚██████╔╝╚██████╔╝██║██║ ╚████║"
+    echo "╚═╝     ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝"
+    echo -e "${CYAN}${BOLD}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo -e "${WHITE}${BOLD}             INSTALADOR DE PROGRAMAS - PINGUIN.SH${NC}"
+    echo -e "${CYAN}${BOLD}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo ""
+}
+
+# Função para exibir o menu
+show_menu() {
+    echo -e "${WHITE}${BOLD}┌─────────────────────────────────────────────────────────────────────────────┐${NC}"
+    echo -e "${WHITE}${BOLD}│                           PROGRAMAS DISPONÍVEIS                            │${NC}"
+    echo -e "${WHITE}${BOLD}├─────────────────────────────────────────────────────────────────────────────┤${NC}"
+    echo -e "${WHITE}${BOLD}│                                                                             │${NC}"
+    echo -e "${WHITE}${BOLD}│  1 - VS Code               │  14 - KolourPaint          │  23 - Docker     │${NC}"
+    echo -e "${WHITE}${BOLD}│  2 - IntelliJ IDEA         │  15 - OBS Studio           │  24 - VirtualBox │${NC}"
+    echo -e "${WHITE}${BOLD}│  3 - GitKraken             │  16 - VLC                  │  25 - NVM/Node   │${NC}"
+    echo -e "${WHITE}${BOLD}│  4 - Dia                   │  17 - GraalVM JDK 21       │  26 - Peek       │${NC}"
+    echo -e "${WHITE}${BOLD}│  5 - Postman               │  18 - VisualVM             │                  │${NC}"
+    echo -e "${WHITE}${BOLD}│  6 - Insomnia              │  19 - P7zip                │                  │${NC}"
+    echo -e "${WHITE}${BOLD}│  7 - Firefox               │  20 - Flameshot            │                  │${NC}"
+    echo -e "${WHITE}${BOLD}│  8 - Chromium              │  21 - Notepadqq            │                  │${NC}"
+    echo -e "${WHITE}${BOLD}│  9 - Brave                 │  22 - Spotify              │                  │${NC}"
+    echo -e "${WHITE}${BOLD}│ 10 - Discord               │                            │                  │${NC}"
+    echo -e "${WHITE}${BOLD}│ 11 - Ryver                 │                            │                  │${NC}"
+    echo -e "${WHITE}${BOLD}│ 12 - GIMP                  │                            │                  │${NC}"
+    echo -e "${WHITE}${BOLD}│ 13 - OpenBoard             │                            │                  │${NC}"
+    echo -e "${WHITE}${BOLD}│                                                                             │${NC}"
+    echo -e "${WHITE}${BOLD}├─────────────────────────────────────────────────────────────────────────────┤${NC}"
+    echo -e "${WHITE}${BOLD}│ Digite os números separados por espaço (ex: 1 5 10 22)                    │${NC}"
+    echo -e "${WHITE}${BOLD}│ ou digite 'all' para instalar tudo                                         │${NC}"
+    echo -e "${WHITE}${BOLD}└─────────────────────────────────────────────────────────────────────────────┘${NC}"
+    echo ""
+    echo -n -e "${WHITE}${BOLD}Sua escolha: ${NC}"
+}
+
+# Função para mostrar progresso
+show_progress() {
+    local text="$1"
+    echo -e "\n${BLUE}${BOLD}[INFO]${NC} ${text}"
+}
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Container -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-12">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+                <!-- Left Content -->
+                <div class="space-y-6 md:space-y-8 fade-in mobile-center lg:text-left">
+                    <div class="inline-block bg-orange-500 bg-opacity-20 border border-orange-500 px-3 py-2 md:px-4 rounded-full text-xs md:text-sm text-orange-400">
+                        Feito por quem usa, para quem vive o Ubuntu
+                    </div>
+                    
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                        Scripts Inteligentes<br>
+                        para quem vive o<br>
+                        <span class="text-orange-400">Ubuntu</span>
+                    </h1>
+                    
+                    <p class="text-gray-400 text-base md:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
+                        Crie instaladores personalizados com menu interativo. Escolha os programas, gere seu script .sh e automatize suas instalações Ubuntu de forma profissional. Sem <b>Snap.</b>
+                    </p>
+
+                    <!-- Features List -->
+                    <div class="space-y-3 text-sm md:text-base">
+                        <div class="flex items-center space-x-3 justify-center lg:justify-start">
+                            <span class="text-orange-400">✅</span>
+                            <span>Instaladores personalizados com menu interativo</span>
+                        </div>
+                        <div class="flex items-center space-x-3 justify-center lg:justify-start">
+                            <span class="text-orange-400">✅</span>
+                            <span>Scripts prontos para os programas mais usados</span>
+                        </div>
+                        <div class="flex items-center space-x-3 justify-center lg:justify-start">
+                            <span class="text-orange-400">✅</span>
+                            <span>Monte seu próprio arquivo .sh selecionando pacotes</span>
+                        </div>
+                        <div class="flex items-center space-x-3 justify-center lg:justify-start">
+                            <span class="text-orange-400">✅</span>
+                            <span>Ideal para suporte técnico, laboratórios e servidores</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="script.html">
+                            <button class="bg-orange-500 text-black px-6 md:px-8 py-3 rounded-lg font-semibold hover-glow transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2">
+                            <span>🚀</span>
+                            <span>Criar Meu Script</span>
+                        </button>
+                        </a>
+                       <a href="lib.html">
+                         <button class="border border-gray-600 px-6 md:px-8 py-3 rounded-lg font-semibold hover:border-orange-400 transition-colors flex items-center justify-center space-x-2">
+                            <span>📚</span>
+                            <span>Ver Exemplos</span>
+                        </button>
+                       </a>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4 pt-4 md:pt-8 justify-center lg:justify-start">
+                        <div class="flex -space-x-2">
+                            <div class="w-8 h-8 bg-gradient-to-r from-orange-400 to-blue-500 rounded-full border-2 border-gray-900 flex items-center justify-center text-xs">🐧</div>
+                            <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-2 border-gray-900 flex items-center justify-center text-xs">🔧</div>
+                            <div class="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full border-2 border-gray-900 flex items-center justify-center text-xs">⚡</div>
+                        </div>
+                        <div class="text-sm text-gray-400">
+                            <div class="font-semibold text-white">Ganhe tempo!</div>
+                            <div>automatize suas instalações!</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right side - Terminal Code Visual (Desktop Only) -->
+                <div class="hidden lg:block relative">
+                    <div class="floating-animation">
+                        <!-- Terminal pattern is in the background -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 px-4 md:px-6 lg:px-12 pb-4 md:pb-6 mt-8 md:mt-12">
+        <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 border-t border-gray-800 pt-4 md:pt-6">
+            <div class="text-xs md:text-sm text-gray-500 text-center sm:text-left">
+                <div class="flex flex-col sm:flex-row items-center sm:space-x-2 space-y-1 sm:space-y-0">
+                    <span>© 2025 Penguin.sh</span>
+                    <span class="hidden sm:inline">•</span>
+                    <span>Feito com 💚 para a comunidade Ubuntu</span>
+                </div>
+                <div class="mt-1">Empodere sua experiência Ubuntu com automação inteligente.</div>
+            </div>
+                <nav class="social-menu">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/lucaspanzera1" target="_blank" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </a>
+                        </li>
+                                                <li>
+                            <a href="https://www.lucaspanzera.com" target="_blank" aria-label="GitHub">
+                                <svg fill="#FFFFFF" width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="hover:fill-purple-200">
+                    <title>attract</title>
+                    <path d="M18 24v-4h-8v-8h8v-4h-12v16h12zM26 12h-4v-4h4v4zM26 24h-4v-4h4v4z"></path>
+                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+    </footer>
+       <script src="resources/js/index.js"></script>
+</body>
+</html>
