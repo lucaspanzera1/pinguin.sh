@@ -63,7 +63,7 @@
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mb-8">
                     <div class="bg-green-500 bg-opacity-20 border border-green-500 px-4 py-2 rounded-full text-sm">
-                        ✅ 26+ Programas Validados
+                        ✅ 4+ Programas Validados
                     </div>
                     <div class="bg-blue-500 bg-opacity-20 border border-blue-500 px-4 py-2 rounded-full text-sm">
                         🔍 Busca Inteligente
@@ -135,12 +135,9 @@
                         <div class="code-overlay">
                             <div class="code-block">
                                 <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
-                                <pre># Instalar VS Code
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
-sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
-sudo apt update
-sudo apt install code -y</pre>
+                                <pre>
+wget -O vscode.deb https://go.microsoft.com/fwlink/?LinkID=760868
+sudo apt-get install ./vscode.deb</pre>
                             </div>
                         </div>
                     </div>
@@ -171,8 +168,23 @@ sudo apt install code -y</pre>
                         <div class="code-overlay">
                             <div class="code-block">
                                 <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
-                                <pre># Instalar IntelliJ IDEA Community
-sudo snap install intellij-idea-community --classic</pre>
+                                <pre>
+wget -O intellij.tar.gz https://download.jetbrains.com/idea/ideaIC-2024.3.3.tar.gz
+sudo tar -xzf intellij.tar.gz -C /opt
+sudo mv /opt/idea-IC-* /opt/intellij-idea
+# Criar desktop entry para IntelliJ
+sudo tee /usr/share/applications/intellij-idea.desktop > /dev/null <<EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=IntelliJ IDEA Community
+Icon=/opt/intellij-idea/bin/idea.svg
+Exec=/opt/intellij-idea/bin/idea.sh %f
+Comment=Capable and Ergonomic IDE for JVM
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-idea
+EOF</pre>
                             </div>
                         </div>
                     </div>
@@ -213,11 +225,18 @@ sudo snap install intellij-idea-community --classic</pre>
                         <div class="code-overlay">
                             <div class="code-block">
                                 <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
-                                <pre># Instalar Postman
-wget -O postman.tar.gz https://dl.pstmn.io/download/latest/linux64
-sudo tar -xzf postman.tar.gz -C /opt/
-sudo ln -s /opt/Postman/Postman /usr/bin/postman
-rm postman.tar.gz</pre>
+                                <pre>wget -O postman.tar.gz https://dl.pstmn.io/download/latest/linux_64
+tar -xvzf postman.tar.gz 
+#install -t ~/.local/share/applications/ ./Postman/Postman
+mv ./Postman /opt/
+echo "[Desktop Entry]
+Encoding=UTF-8
+Name=Postman
+Exec=/opt/Postman/app/Postman %U
+Icon=/opt/Postman/app/resources/app/assets/icon.png
+Terminal=false
+Type=Application
+Categories=Development;" > /usr/share/applications/postman.desktop</pre>
                             </div>
                         </div>
                     </div>
